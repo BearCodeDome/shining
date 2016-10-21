@@ -1,0 +1,346 @@
+#midder_Bim{
+	width:100%;
+	position: relative;
+	overflow: hidden;
+}
+.con1{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	background: #e5e5e5;
+}
+
+.con_wrap{
+	width: 100%;
+	height: 100%;
+}
+.con_wrap>img{
+	width:100%;
+	height: 100%;
+	
+}
+.con_wrap{
+	position: relative;
+	max-width: 980px;
+	width: 75%;
+	height: 100%;
+	margin: 0 auto;
+	z-index: 1;
+}
+.con_wrap h2{
+	color: #616161;
+	display: inline-block;
+	padding: 0px 0.2em;
+	border: 1px solid #616161;
+	line-height: 1em;
+	font-size: 1.4em;
+	border-radius: 0.2em;
+	margin-right: 0.3em;
+}
+.con_wrap h3{
+	color: #616161;
+	display: inline-block;
+	line-height: 150%;
+	font-size: 1.4em;
+}
+.con_wrap span{
+	display: block;
+	width: 40%;
+	line-height: 1.4em;
+	margin: 15px 0;
+	z-index: 100;
+	word-break: break-word;
+}
+.con1_1{
+	position: relative;
+	padding-top:12em ;
+	padding-bottom: 4em;
+}
+.con1_1 div{
+	width: 40%;
+	overflow: hidden;
+}
+.con1_1 div img{
+	width: 33%;
+	float: left;
+}
+.building1_top{
+	width: 22em;
+	height: 100%;
+	position: absolute;
+	right: 8em;
+	bottom: 0;
+}
+.building1_bottom{
+	width: 22em;
+    position: absolute;
+    right: 10.9em;
+    top:0;
+}
+.con2{
+	width: 100%;
+	height: 100%;
+	z-index: 50;
+	position: relative;
+}
+.con2_2{
+	position: relative;
+	padding-top:12em;	
+	margin-bottom: 4em;
+}
+
+
+.con2_2 div{
+	
+	width: 50%;
+	overflow: hidden;
+}
+.con2_2 div img{
+	width: 47%;
+	margin-right: 0.3em;
+	
+}
+
+
+.con3{
+	width: 100%;
+	position: relative;
+	z-index: 100;
+	padding-top: 12em;
+	padding-left: 30em;
+	background-color: #e5e5e5;
+
+}
+.con3_3 div{
+	width: 60%;
+	overflow: hidden;
+}
+.con3_3 div img{
+	width: 47%;
+	margin-right: 0.3em;
+	margin-bottom:4em
+}
+.building2_top{
+	width: 25em;
+	position: absolute;
+	bottom: 0;
+	left: 10em;
+}
+
+.con4{
+	width: 100%;
+	position: relative;
+	padding-top: 12em;
+	
+}
+.con4_4 div{
+	width: 40%;
+	max-width: 13em;
+	margin-bottom: 4em;
+	
+}
+.con4_4 div img{
+	width: 100%;
+	margin-bottom: 0.3em;
+
+}
+.building2_bottom{
+	width: 25em;
+	position: absolute;
+	top: 0;
+	left: 13.2em;
+}
+.building3_top{
+	width: 26em;
+	position: absolute;
+	bottom: 0;
+	right: 5em;
+}
+
+.con5{
+	width: 100%;
+	position: relative;
+	padding-top: 16em;
+	background-color: #e5e5e5;
+}
+.con5_5{
+	margin-bottom: 4em;
+}
+.building3_bottom{
+	width: 26em;
+	position: absolute;
+	top: 0;
+	right: 8.7em;
+}
+
+@media only screen and (min-width:120px ) and (max-width:859px) {
+	
+	.con1{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	background: #e5e5e5;
+}
+
+.con_wrap{
+	width: 100%;
+	height: 100%;
+}
+.con_wrap>img{
+	width:100%;
+	height: 100%;
+	
+}
+.con_wrap{
+position: relative;
+    margin: 0 auto;
+    z-index: 1;
+}
+.con_wrap h2{
+	color: #616161;
+	display: inline-block;
+	padding: 0px 0.2em;
+	border: 1px solid #616161;
+	line-height: 1em;
+    font-size: 1em;
+    border-radius: 0.2em;
+    margin-right: 0.3em;
+    margin-left: 0.5em;
+}
+.con_wrap h3{
+    color: #616161;
+    display: inline-block;
+    font-size: 1em;
+}
+.con_wrap span{
+    display: block;
+    width: 68%;
+    line-height: 1.4em;
+    z-index: 100;
+    margin-left: 0.5em;
+}
+.con1_1{
+    position: relative;
+    padding-top: 6em;
+    padding-bottom: 4em;
+}
+.con1_1 div{
+    width: 50%;
+    overflow: hidden;
+    margin-left: 0.5em;
+}
+.con1_1 div img{
+	width: 33%;
+	float: left;
+}
+.building1_top{
+    width: 17em;
+    position: absolute;
+    right: -5em;
+    bottom: 0;
+}
+.building1_bottom{
+    width: 17em;
+    position: absolute;
+    right: -2.9em;
+    top: 0;
+}
+.con2{
+	width: 100%;
+	height: 100%;
+	z-index: 50;
+	position: relative;
+}
+.con2_2{
+    position: relative;
+    padding-top: 6em;
+    margin-bottom: 4em;
+}
+
+
+.con2_2 div{
+	
+	width: 100%;
+	overflow: hidden;
+}
+.con2_2 div img{
+	width: 40%;
+    padding-left: 0.5em;
+	
+}
+
+
+.con3{
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    padding-top: 6em;
+    padding-left: 6em;
+    background-color: #e5e5e5;
+
+}
+.con3_3 div{
+    width: 100%;
+    overflow: hidden;
+}
+.con3_3 div img{
+	width: 30%;
+    margin-bottom: 4em;
+    margin-left: 0.5em;
+}
+.building2_top{
+    width: 17em;
+    position: absolute;
+    bottom: 0;
+    left: -5.5em;
+}
+
+.con4{
+    width: 100%;
+    position: relative;
+    padding-top: 6em;
+	
+}
+.con4_4 div{
+	width: 40%;
+	max-width: 13em;
+	margin-bottom: 4em;
+	
+}
+.con4_4 div img{
+	width: 100%;
+    margin-bottom: 0.3em;
+    margin-left: 0.5em;
+
+}
+.building2_bottom{
+    width: 17em;
+    position: absolute;
+    top: 0;
+    left: -3.3em;
+}
+.building3_top{
+    width: 15em;
+    position: absolute;
+    bottom: 0;
+    right: -4em;
+}
+
+.con5{
+	width: 100%;
+	position: relative;
+	padding-top: 15em;
+	background-color: #e5e5e5;
+}
+.con5_5{
+	margin-bottom: 4em;
+}
+.building3_bottom{
+    width: 15em;
+    position: absolute;
+    top: 0;
+    right: -1.8em;
+}
+}

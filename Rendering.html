@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+						body {
+				background-color: black;
+			}
+			
+			#waterfall_ul {
+				width: 98%;
+				margin: 0 auto;
+				list-style: none;
+				position: relative;
+			}
+			
+			#waterfall_ul li {
+				width: 20%;
+				position: absolute;
+				box-sizing: border-box;
+				padding: 0 0.3%;
+			}
+			/*before在前面*/
+			
+			#waterfall_ul li:hover::before {
+				/*下面的两个属性是伪元素必须的*/
+				content: "";
+				display: block;
+				position: absolute;
+				background-color: rgba(0, 0, 0, 0.6);
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+			/*after是后面*/
+			
+			#waterfall_ul li:hover::after {
+				/*下面的两个属性是伪元素必须的*/
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: url(img/fangda.png) no-repeat 50%;
+			}
+			
+			#waterfall_ul li img {
+				width: 100%;
+				vertical-align: bottom;
+				box-sizing: border-box;
+				border: 10px solid white;
+			}
+			
+			#cover {
+				position: fixed;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.75);
+			}
+			
+			#cover span img {
+				width: 40%;
+				display: block;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				position: absolute;
+				border: 10px solid black;
+			}
+			
+			#navl,
+			#navr {
+				position: fixed;
+				z-index: 100;
+				top: 45%;
+				display: none;
+			}
+			
+			#navl {
+				left: 10%;
+			}
+			
+			#navr {
+				right: 10%;
+			}
+		</style>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/Rendering.css" />
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div id="header">
+				<div class="logo">
+					<a href="###"><img src="image/shininglogo.png" /></a>
+				</div>
+
+				<input type="button" name="buttonnav" id="buttonnav" value="" />
+
+				<ul class="nav-list clear">
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="About.html">About</a>
+					</li>
+					<li>
+						<a href="Rendering.html">Rendering</a>
+					</li>
+					<li>
+						<a href="3D Animation.html">3D Animation</a>
+					</li>
+					<li>
+						<a href="Bim.html">Bim</a>
+					</li>
+					<li>
+						<a href="Contact.html">Contact</a>
+					</li>
+				</ul>
+			</div>
+
+
+
+			<div id="midder_Rendering">
+				<!--大图滚动-->
+				<div class="wrap_img clear">
+					<ul>
+						<li >
+							<img src="image/Banner (1).jpg"/>
+						</li>
+						<li>
+							<img src="image/Banner (2).jpg"/>
+						</li>
+						<li>
+							<img src="image/Banner (3).jpg"/>
+						</li>
+					</ul>
+					<div class="nav_span">
+						<span class="active"></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				
+				<!--瀑布流-->
+		<ul id="waterfall_ul"></ul>
+		<div id="cover" style="display: none;">
+			<!--<div id="navl">
+				<img src="img/navl.png" />
+			</div>
+			<div id="navr">
+				<img src="img/navr.png" />
+			</div>-->
+			<span>
+				<img id="bigimg" src="" alt="">
+			</span>
+		</div>
+				
+				
+				
+				
+				
+				
+				
+			</div>
+
+			
+
+			<div id="footer">
+				<di class="share">
+					<a href="###">
+						<img src="image/mail.jpg" />
+						<img src="image/mail_h.jpg" />
+					</a>
+
+					<div class="share-other">
+						<a href="###">
+							<img src="image/facebook.jpg" />
+							<img src="image/facebook_h.jpg" />
+						</a>
+						<a href="###">
+							<img src="image/linkedln.jpg" />
+							<img src="image/linkedln_h.jpg" />
+						</a>
+						<a href="###">
+							<img src="image/twitter.jpg" />
+							<img src="image/twitter_h.jpg" />
+						</a>
+						<a href="###">
+							<img src="image/youtube.jpg" />
+							<img src="image/youtube_h.jpg" />
+						</a>
+					</div>
+
+					<div class="copyright">
+						<span>
+						Copyright © 1998-2015 shining Group
+					</span>
+					</div>
+
+			</div>
+		</div>
+
+	</body>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/Rendering.js"></script>
+	<script type="text/javascript">
+		
+		//瀑布流
+		var fall = document.getElementById("waterfall_ul");
+		var cover = document.getElementById("cover");
+		var navl = document.getElementById("navl");
+		var navr = document.getElementById("navr");
+		var bigimg = document.getElementById("bigimg");
+		var lis = document.getElementsByTagName("li");
+		var Imgs = fall.getElementsByTagName("img");
+		//console.log(Imgs);
+		var oImg = ["img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg", "img/5.jpg", "img/6.jpg", "img/7.jpg", "img/8.jpg", "img/9.jpg", "img/10.jpg", "img/11.jpg", "img/12.jpg", "img/13.jpg", "img/14.jpg", "img/15.jpg", "img/16.jpg", "img/17.jpg", "img/18.jpg", "img/19.jpg", "img/20.jpg", "img/21.jpg", "img/22.jpg", "img/23.jpg", "img/24.jpg", "img/25.jpg", "img/26.jpg", "img/27.jpg", "img/28.jpg", "img/29.jpg", "img/30.jpg", "img/31.jpg", "img/32.jpg", "img/33.jpg", "img/34.jpg", "img/35.jpg", "img/36.jpg", "img/37.jpg", "img/38.jpg", "img/39.jpg", "img/40.jpg", "img/41.jpg", "img/42.jpg", "img/43.jpg", "img/44.jpg", "img/45.jpg", "img/46.jpg", "img/47.jpg", "img/48.jpg", "img/49.jpg", "img/50.jpg", "img/51.jpg", "img/52.jpg", "img/53.jpg", "img/54.jpg", "img/55.jpg", "img/56.jpg", "img/57.jpg", "img/58.jpg", "img/59.jpg", "img/60.jpg", "img/61.jpg", "img/62.jpg", "img/63.jpg", "img/64.jpg", "img/65.jpg", "img/66.jpg", "img/67.jpg", "img/68.jpg", "img/69.jpg", "img/70.jpg", "img/71.jpg", "img/72.jpg", "img/73.jpg"];
+
+		//取得一开始的数组的长度
+		var imglength = oImg.length;
+		var img2 = oImg.length;
+
+		//定义一个每次生成多少图片的变量，设置20张，可随意修改
+		var createNum = 20;
+
+		//定义一个全局的高度数组
+		var arrH = [];
+		var aaa = [];
+		//定义一个保存最高高度的接收变量，因为判断高度有两种方式，所以这个注释了，可以参考
+		//var maxH = 0;
+
+		//预加载变量
+		var onum = 0;
+		// 图片预加载,因为图片加载的速度远大于程序语句执行的速度,
+		// 如果不进行预加载,则图片加入的时候只是一个空空的img标签,并没有实质的内容
+		// 这时候读取到的li高度实际上是没有内容时的li高度(后台读取到为18px)
+		
+	 	var reload = true;
+		for(var i = 0; i < oImg.length; i++) {
+			var img = new Image();
+			img.src = oImg[i];
+			img.onload = function() {
+				onum++;
+				if(onum == oImg.length) {
+					createLi(createNum);
+				}
+			}
+		}
+//		for(var q = 0; q < lis.length; q++) {
+//			lis[i].style.paddingLeft = "0.4%";
+//			lis[i].style.paddingRight = "0.4%";
+//
+//		}
+		//创建li结构
+		function createLi(num) {
+			for(var i = 0; i < num; i++) {
+				var li = document.createElement('li');
+				var img = document.createElement('img');
+				fall.appendChild(li);
+				li.appendChild(img);
+				li.style.paddingLeft = "0.4%";
+				li.style.paddingRight = "0.4%";
+				var a = oImg[randomFn(oImg.length, 0)];
+				aaa.push(a);
+				img.setAttribute("src", a);
+				//				console.log(img.offsetHeight);
+			}
+			img2 -= 20;
+			change();
+		}
+
+		//图片排列
+		function change() {
+			var lis = fall.getElementsByTagName("li");
+			
+			var imgs = fall.getElementsByTagName('img');
+			if(reload){
+				var windowCW = document.documentElement.offsetWidth-17;
+				var lis_W = lis[0].offsetWidth-4;
+				reload=false;
+			}
+			else{
+				var windowCW = document.documentElement.offsetWidth;
+				var lis_W = lis[0].offsetWidth;
+			}
+			
+			var n = Math.floor(windowCW / lis_W); //n表示一行能容纳多少个div   5列
+
+			arrH = [];
+			for(var i = 0; i < lis.length; i++) { //10张
+
+				// j表示有多少列
+				var j = i % n;
+
+				// 一行排满n个后到下一行     
+				if(arrH.length == n) {
+					// 找到最小高度 将图片放在最小的那一列
+					var min = findMin(arrH);
+					//					console.log(lis[i]);
+					lis[i].style.left = min * lis_W + "px";
+					lis[i].style.top = arrH[min] + 10 + "px";
+					arrH[min] += lis[i].offsetHeight + 10;
+
+					// 找到最高的一列 将高度复制给ul
+					// 撑开页面，因为使用了定位
+
+					var k = findMax(arrH);
+					// fall.style.height = arrH[k] + 'px'
+					// 可以增加一个判断防止fall重新从0开始
+					//             if (arrH[k]>maxH) {
+					//                 maxH=arrH[k];
+					//             }
+					//             fall.style.height = maxH + 'px';
+					// console.log(fall.style.height);
+					// 每次fall的重新计算,都会导致ul.fall高度坍塌.
+					// 应该使用一个全局变量来保存一下当前的最高值.
+				} else {
+					arrH[j] = imgs[i].offsetHeight;
+					lis[i].style.left = lis_W * j + "px";
+					lis[i].style.top = 0;
+				}
+				//		console.log(j + ": " + lis[i].style.top);
+
+			}
+			// 或者等到排完之后,再把真正最大的arrH[K]赋给fall
+
+			fall.style.height = arrH[k] + 'px';
+			bigImg();
+		}
+		//窗口改变重新排序
+		window.onresize = function() {
+			fall.innerHTML = ""
+			for(var i = 0; i < aaa.length; i++) {
+				var li = document.createElement('li');
+				var img = document.createElement('img');
+				fall.appendChild(li);
+				li.appendChild(img);
+				img.setAttribute("src", aaa[i]);
+			}
+			change(); // 把滚动条拉到底部,然后改变视窗尺寸,可以发现滚动条会跳到最顶部.
+		}
+
+		//图片每次加载随机数
+		function randomFn(max, min) {
+			return parseInt(Math.random() * (max - min)) + min;
+		}
+
+		// 找出每一列的最小位置的下标
+		function findMin(arr) {
+			// 存储最小位置的下标
+			var index = 0;
+			// 遍历找到数组中最小的值
+			for(var i = 0; i < arr.length; i++) {
+				if(arr[index] > arr[i]) {
+					index = i;
+				}
+			}
+			// 最后返回这个最小位置的下标
+			return index;
+		}
+
+		//找出每一列的最大的高度下标
+		function findMax(arr) {
+			// 存储最大位置的下标
+			var index = 0;
+			// 遍历找到数组中最大的值
+			for(var i = 0; i < arr.length; i++) {
+				if(arr[index] < arr[i]) {
+					index = i;
+				}
+			}
+			// 最后返回这个最小位置的下标
+			return index;
+		}
+
+		//定义一个布尔值，判断创建的元素是否等于数组图片里的数量，全局变量
+		//false是还没有创建完，
+		//当图片数组里的图片都加载出来，创建完之后，就不在下拉创建，为true。
+		//这样就保证我有多少张图片就创建多少图片
+		var bol = false;
+
+		//判断滚动条是否到达底部
+		window.onscroll = function() {
+				fall.innerHTML = ""
+				for(var i = 0; i < aaa.length; i++) {
+					var li = document.createElement('li');
+					var img = document.createElement('img');
+					fall.appendChild(li);
+					li.appendChild(img);
+					img.setAttribute("src", aaa[i]);
+				}
+				change();
+
+				var lis = document.getElementsByTagName("li");
+				console.log(lis.length);
+				if(lis.length >= imglength) {
+					bol = true
+				}
+
+				if(bol == false) {
+					var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+					// console.log(scrollTop); // 为什么每次新生成图片之后,滚动条就飞回去最顶部
+					// 实验证明,是change()搞的鬼.
+					var windowH = document.documentElement.clientHeight;
+					//判断滚动条是否到达底部
+					if(arrH[findMin(arrH)] - windowH < scrollTop) {
+						//当图片数组中剩余的图片小于要创建图片的数量，就直接创建剩余的图片数量，而不是按默认数量创建
+						if(img2 < createNum) {
+							createLi(img2);
+							// change();// 多余了,createLi里面本来就有change()
+						} else {
+							//图片数组中的数量足够，则继续按照默认的创建
+							createLi(createNum);
+							// change();// 多余了,createLi里面本来就有change()
+						}
+					}
+				}
+			}
+			//可能是有预加载，所以注释了对程序没有印象，没有验证....
+			//window.onload = function() {
+			//  change();
+			//}
+			
+					//在li加入伪元素后，没办法直接点击图片放大，所以获取点击li下的子元素的img元素图片路径
+		function bigImg() {
+			for(var i = 0; i < lis.length; i++) {
+				lis[i].index = i;
+				lis[i].onclick = function() {
+					index = this.index;
+					cover.style.display = "block";
+//					navl.style.display = 'block';
+//					navr.style.display = 'block';
+					// 更改bigimg的src为当前点击图片的src,使其显示当前点击的图片
+//					bigimg.src = this.src;
+//					childten返回的数组，所以要给下标，因为伪元素是没办法被获取到的，所以就返回下标0就可以直接找到，
+					//childNode是返回换行和回车,所以这边不能使用
+					bigimg.src = this.children[0].src;
+				}
+			}
+		}
+			
+			
+				//当点击遮罩层的时候将本身和子元素隐藏
+		cover.onclick = function(e) {
+			var e = e || window.event;
+			cover.style.display = "none";
+			e.stopPropagation();
+		}
+			
+	</script>
+
+</html>

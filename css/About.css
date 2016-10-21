@@ -1,0 +1,45 @@
+
+.bg{
+	width: 100%;
+	
+	 background: url(../image/world_map.png) center center no-repeat;
+	 background-color: #f17d7d;;
+}
+.txt{
+	display: block;
+    width: 33em;
+}
+.txt dt{
+    font-size: 2em;
+    margin-bottom: 1em;
+    padding-top: 3.6em;
+    padding-left: 0.5em;
+}
+.txt dd{
+	display: block;
+    padding-left: 1em;
+    line-height: 2em;
+    margin-bottom: 2em;
+}
+
+.ul-logo li{
+    float: left;
+    padding-left: 1em;
+    width: 8em;
+    height: 5em;
+    text-align: center;
+}
+
+@media only screen and (min-width:320px ) and (max-width:640px) {
+	.txt dt{
+     font-size: 2em;
+    margin-bottom: 0.5em;
+    padding-top: 1em;
+    padding-left: 0.5em;
+}
+	
+	.txt{
+	display: block;
+    width: 100%;
+}
+}

@@ -1,0 +1,106 @@
+.bg2{
+	width: 100%;
+	 background: url(../image/contact_point_bg.png) center center no-repeat;
+	background-color: #ef7b7b;
+}
+.ul_name{
+	text-align: center;
+	font-family: arial;
+	padding-top: 8em;
+}
+.ul_name span{
+	font-size: 1.4em;
+}
+.ul_name em{
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.1em;
+    color: #595757
+}
+
+.ul_email{
+	text-align: center;
+	padding-top: 1em;
+}
+.ul_email span{
+	font-size: 1.4em;
+}
+.ul_email em{
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.1em;
+    color: #595757
+}
+.ul_info{
+    margin: auto;
+    margin-top: 5em;
+    display: block;
+    text-align: center;
+    width: 780px;
+    padding-bottom: 6em;
+}
+
+.ul_info li{
+	float: left;
+	text-align: center;
+	
+}
+
+.ul_info li:nth-child(1){
+	background: url(../image/contact_phone.png) no-repeat;
+	padding-left: 3em;
+	/*margin-left: 1em;*/
+}
+
+.ul_info li:nth-child(2){
+	background: url(../image/iphone.png) no-repeat;
+	height: 37px;
+	line-height: 37px;
+	margin-left: 1em;
+	padding-left: 2em;
+}
+
+.ul_info li:nth-child(3){
+	background: url(../image/contact_add.png) no-repeat;
+	padding-left: 2em;
+	margin-left: 1em;
+	height: 37px;
+}
+
+
+.ul_info p{
+	font-family: arial;
+	font-size: 1em;
+	text-align: left;
+}
+
+.big_img img{
+	width: 100%;
+}
+
+@media only screen and (min-width:120px ) and (max-width:640px) {
+	.ul_info{
+    margin:0 auto;
+    margin-top: 5em;
+    display: block;
+    text-align: center;
+    width:100%;
+    padding-bottom: 6em;
+}
+.ul_info p{
+	font-family: arial;
+	font-size: 0.8em;
+}
+
+.ul_info li{
+	margin-top: 1em;
+	margin-left: 1em;
+	padding-left: 3em !important;
+}
+
+
+
+
+
+
+
